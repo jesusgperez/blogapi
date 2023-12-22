@@ -24,4 +24,11 @@ Things you may want to cover:
 * ...
 
 # Commands
-rails new blogapi --api -T --database postgresql        # A new flag to specify that we are going to create just an API
+rails new blogapi --api -T --database postgresql            # A new flag to specify that we are going to create just an API
+EDITOR=vim rails credentials:edit                           # Edits the encrypted credentials
+rails db:create                                             # Create databases in the database engine
+
+# Modifications
+user = <%= Rails.application.credentials[:DB_USER] %>       # This is going to take the credentials from the encrypted file
+password = <%= Rails.application.credentials[:DB_PASS] %>   # This is going to take the credentials from the encrypted file
+
