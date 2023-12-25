@@ -29,7 +29,9 @@ EDITOR=vim rails credentials:edit                           # Edits the encrypte
 rails db:create                                             # Create databases in the database engine
 rails generate rspec:install                                # Installs the necessary files for testing
 rails destroy model post                                    # Destroys a generated model
-
+rails g factory_bot:model user email:string name:string auth_token:string   # Creates a factory bot for the specified model
+RAILS_ENV=test rails c                                      # Access the console from another environment
+FactoryBot.build(:model)
 
 # Modifications
 user = <%= Rails.application.credentials[:DB_USER] %>       # This is going to take the credentials from the encrypted file
