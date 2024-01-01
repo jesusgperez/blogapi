@@ -32,6 +32,7 @@ rails destroy model post                                    # Destroys a generat
 rails g factory_bot:model user email:string name:string auth_token:string   # Creates a factory bot for the specified model
 RAILS_ENV=test rails c                                      # Access the console from another environment
 FactoryBot.build(:model)
+rails g serializer <model>                                  # Creates a serializer for the model
 
 # Modifications
 user = <%= Rails.application.credentials[:DB_USER] %>       # This is going to take the credentials from the encrypted file
