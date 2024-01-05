@@ -9,7 +9,7 @@ RSpec.describe "Posts", type: :request do
 			expect(payload).to be_empty
       expect(response).to have_http_status(200)
 		end
-    
+
     describe "Search" do
       let!(:hola_mundo) {create(:published_post, title: 'Hola Mundo')}
       let!(:hola_rails) {create(:published_post, title: 'Hola Rails')}
