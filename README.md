@@ -37,8 +37,8 @@ bundle exec rspec path/to/file.rb:29                        # Executes just a si
 tail -f log/test.log                                        # Follows logs, in this case database queries
 curl localhost:3000/health | jq .                           # Formats the json in the console
 rails g job post_report                                     # Generates a job to be executed in background
+rails g mailer post_report                                  # Generates a mailer struc for the reports
 
 # Modifications
 user = <%= Rails.application.credentials[:DB_USER] %>       # This is going to take the credentials from the encrypted file
 password = <%= Rails.application.credentials[:DB_PASS] %>   # This is going to take the credentials from the encrypted file
-
