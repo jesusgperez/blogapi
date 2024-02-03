@@ -31,7 +31,7 @@ rails generate rspec:install                                # Installs the neces
 rails destroy model post                                    # Destroys a generated model
 rails g factory_bot:model user email:string name:string auth_token:string   # Creates a factory bot for the specified model
 RAILS_ENV=test rails c                                      # Access the console from another environment
-FactoryBot.build(:model)
+FactoryBot.build(:model)                                    # Creates a fake instance of the specified model
 rails g serializer <model>                                  # Creates a serializer for the model
 bundle exec rspec path/to/file.rb:29                        # Executes just a single test
 tail -f log/test.log                                        # Follows logs, in this case database queries
